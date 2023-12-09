@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Link from "../../atoms/Link/Link";
-import React from "react";
+import { Link } from "../../atoms/Link/Link";
 
 type NavbarProps = {
   menuItems: { name: string; route: "#"; icon: React.ReactNode }[];

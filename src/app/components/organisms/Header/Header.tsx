@@ -2,7 +2,7 @@ import Navbar from "../../molecules/Navbar/Navbar";
 import React from "react";
 import styled from "styled-components";
 import ProfileImage from "../../atoms/ProfileImage/ProfileImage";
-import Link from "../../atoms/Link/Link";
+import { Link } from "../../atoms/Link/Link";
 
 type HeaderProps = {
   menuItems: { name: string; route: "#"; icon: React.ReactNode }[];

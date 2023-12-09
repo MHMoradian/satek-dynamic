@@ -1,22 +1,6 @@
 import styled, { css } from "styled-components";
 
-import React from "react";
-
-type ButtonProps = {
-  children: string;
-  disabled?: boolean;
-  color?: "blue" | "green" | "red";
-  name?: "arrow";
-  className?: string;
-};
-
-const Button = (props: ButtonProps) => {
-  return <StyledButton {...props}>{props.children}</StyledButton>;
-};
-
-export default Button;
-
-export const StyledButton = styled.button`
+export const Button = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;

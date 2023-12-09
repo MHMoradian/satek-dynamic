@@ -1,7 +1,5 @@
 import Navbar from "../../molecules/Navbar/Navbar";
 import styled from "styled-components";
-import Link from "../../atoms/Link/Link";
-import Help from "../../atoms/icons/HelpIcon";
 
 type SidebarProps = {
   menuItems: { name: string; route: "#"; icon: React.ReactNode }[];
@@ -16,11 +14,6 @@ const Sidebar = (props: SidebarProps) => {
         </div>
       </div>
       <Navbar menuItems={props.menuItems} />
-      {/* <div>
-        <Link href="#" className="sidebar-help-link">
-          <Help />
-        </Link>
-      </div> */}
     </StyledSidebar>
   );
 };
