@@ -8,12 +8,13 @@ type NavbarProps = {
 
 const Navbar = (props: NavbarProps) => {
   return (
-    <StyledMenu>
+    <StyledMenu className="nav-list">
       {props.menuItems.map((menuItem) => {
         return (
-          <MenuItem>
+          <MenuItem className="nav-item">
             <Link href={menuItem.route || "#"}>
-              {menuItem.name} {menuItem.icon}
+              {menuItem.icon}
+              <span>{menuItem.name}</span>
             </Link>
           </MenuItem>
         );
@@ -30,7 +31,7 @@ export const StyledMenu = styled.ul`
   align-items: center;
   /* justify-content: space-between; */
   gap: 5rem;
-  margin-right: 8rem;
+  margin-right: 9rem;
 `;
 
 export const MenuItem = styled.li`
