@@ -56,6 +56,7 @@ const StyledSidebar = styled.aside`
       svg {
         width: 100%;
         border: 3px solid transparent;
+        height: 50px;
       }
     }
     a:hover {

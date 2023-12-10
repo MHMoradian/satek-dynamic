@@ -3,24 +3,27 @@ import { MainHeading } from "../../atoms/MainHeading/MainHeading";
 import Template from "../../templates/Template";
 import { SecondaryHeading } from "../../atoms/SecondaryHeading/SecondaryHeading";
 import ThreeButtons from "../../molecules/ThreeButtons/ThreeButtons";
+import { Card } from "../../atoms/Card/Card";
 
 const SalePage = () => {
   return (
     <Template>
-      <CardContentContainer>
-        <MainHeading>تعهدات مکانی و زمانی</MainHeading>
-        <br />
-        <br />
-        <input type="select" style={{ width: "400px" }} />
-        <SecondaryHeading>انتخاب استان های منتخب</SecondaryHeading>
-        <SecondaryHeading>ساعات سرویس دهی</SecondaryHeading>
-        <ThreeButtons
-          firstText="۸ الی ۱۵"
-          secondText="۸ الی ۲۲"
-          thirdText="شبانه روز"
-          className="sale-three-buttons"
-        />
-      </CardContentContainer>
+      <Card $width="800px" $height="1000px">
+        <CardContentContainer>
+          <MainHeading>تعهدات مکانی و زمانی</MainHeading>
+          <br />
+          <br />
+          <input type="select" style={{ width: "400px" }} />
+          <SecondaryHeading>انتخاب استان های منتخب</SecondaryHeading>
+          <SecondaryHeading>ساعات سرویس دهی</SecondaryHeading>
+          <ThreeButtons
+            firstText="۸ الی ۱۵"
+            secondText="۸ الی ۲۲"
+            thirdText="شبانه روز"
+            className="sale-three-buttons"
+          />
+        </CardContentContainer>
+      </Card>
     </Template>
   );
 };
