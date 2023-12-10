@@ -5,15 +5,17 @@ type ThreeButtonsProps = {
   firstText: string;
   secondText: string;
   thirdText: string;
+  className?: string;
 };
 
 const ThreeButtons = ({
   firstText,
   secondText,
   thirdText,
+  className,
 }: ThreeButtonsProps) => {
   return (
-    <ThreeButtonsStyle>
+    <ThreeButtonsStyle className={className}>
       <Button className="three-buttons-first">{firstText}</Button>
       <Button className="three-buttons-second">{secondText}</Button>
       <Button className="three-buttons-third">{thirdText}</Button>
@@ -22,7 +24,7 @@ const ThreeButtons = ({
 };
 
 export const ThreeButtonsStyle = styled.div`
-  display: inline-flex;
+  display: flex;
   border: none;
   border-radius: 1.5rem;
 

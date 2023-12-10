@@ -115,10 +115,3 @@ body {
   background-color: #e9e9e9;
   box-sizing: border-box;
 }
-
-.container {
-  width: 1000px;
-  height: 700px;
-  background-color: #fff;
-  margin: 5rem auto;
-}

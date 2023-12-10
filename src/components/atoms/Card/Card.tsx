@@ -9,26 +9,12 @@ const Card: FC<IProps> = ({ children }) => {
   return <StyledSale>{children}</StyledSale>;
 };
 
+export default Card;
+
 const StyledSale = styled.div`
   width: 1000px;
   height: 700px;
   background-color: #fff;
   margin: 5rem auto;
   border-radius: 1.5rem;
-  display: flex;
-  flex-direction: column;
-
-  .sale-container {
-    margin: 1rem auto;
-  }
-
-  .sale-heading {
-    /* margin-right: 1rem; */
-  }
-
-  .sale-delivery-heading {
-    margin-bottom: 1rem;
-  }
 `;
-
-export default Card;
