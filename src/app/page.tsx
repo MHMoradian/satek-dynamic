@@ -1,95 +1,97 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import Image from "next/image";
+import styles from "./page.module.css";
+// import Button from "./components/atoms/Button/Button";
+import ThreeButtons from "./components/molecules/ThreeButtons/ThreeButtons";
+import TwoButtons from "./components/molecules/TwoButtons/TwoButtons";
+import Navbar from "./components/molecules/Navbar/Navbar";
+import Header from "./components/organisms/Header/Header";
+import ProfileImage from "./components/atoms/ProfileImage/ProfileImage";
+import NewRequestIcon from "./components/atoms/icons/NewRequestIcon";
+import RequestsHistoryIcon from "./components/atoms/icons/RequestsHistoryIcon";
+import NotCompletedRequests from "./components/atoms/icons/NotCompletedRequestsIcon";
+import Sidebar from "./components/organisms/Sidebar/Sidebar";
+import Help from "./components/atoms/icons/HelpIcon";
+import HelpIcon from "./components/atoms/icons/HelpIcon";
+import NotCompletedRequestsIcon from "./components/atoms/icons/NotCompletedRequestsIcon";
+import RequestListIcon from "./components/atoms/icons/RequestListIcon";
+import OraganizationsIcon from "./components/atoms/icons/OraganizationsIcon";
+import DashboardIcon from "./components/atoms/icons/DashboardIcon";
+import SettingsIcon from "./components/atoms/icons/SettingsIcon";
+import Sale from "./components/templates/Template";
+import { Button } from "./components/atoms/Button/Button";
+import HomePage from "./components/pages/HomePage";
+
+// import { WhiteButton, BlueButton } from "./components/atoms/Button/Button";
+// import ThreeButtons from "./components/molecules/ThreeButtons/ThreeButtons";
+// import TwoButtons from "./components/molecules/ThreeButtons/TwoButtons";
+// import Header from "./components/molecules/ThreeButtons/Header/Header";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      {/* <Header
+        userImage="https://avatars.githubusercontent.com/u/88085664?s=48&v=4"
+        userName="مرادیان"
+        menuItems={[
+          {
+            name: "ثبت درخواست جدید",
+            route: "#",
+            icon: <NewRequestIcon />,
+          },
+          {
+            name: "درخواست های تکمیل نشده",
+            route: "#",
+            icon: <NotCompletedRequestsIcon />,
+          },
+          {
+            name: "تاریخچه درخواست ها",
+            route: "#",
+            icon: <RequestsHistoryIcon />,
+          },
+        ]}
+      />
+      <Sidebar
+        menuItems={[
+          {
+            name: "داشبورد",
+            route: "#",
+            icon: <DashboardIcon />,
+          },
+          {
+            name: "درخواست‌ها",
+            route: "#",
+            icon: <RequestListIcon />,
+          },
+          {
+            name: "سازمان",
+            route: "#",
+            icon: <OraganizationsIcon />,
+          },
+          {
+            name: "راهنما",
+            route: "#",
+            icon: <HelpIcon />,
+          },
+        ]}
+      />
+      <div className="container">
+        <Button>NORMAL</Button>
+        <Button disabled>DISABLED</Button>
+        <Button color="blue">BLUE</Button>
+        <Button color="green">GREEN</Button>
+        <Button color="red">RED</Button>
+        <Button name="arrow">RED</Button>
+        <br />
+        <br />
+        <br />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <TwoButtons firstText="عادی" secondText="فوری" />
+        <br />
+        <br />
+        <ThreeButtons firstText="۸ الی ۱۵" secondText="bye" thirdText="!" />
+      </div> */}
+      <HomePage />
+    </>
+  );
 }
