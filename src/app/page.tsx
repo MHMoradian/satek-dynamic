@@ -21,6 +21,7 @@ import SettingsIcon from "./components/atoms/icons/SettingsIcon";
 import Sale from "./components/templates/Template";
 import { Button } from "./components/atoms/Button/Button";
 import HomePage from "./components/pages/HomePage";
+import InputMain from "./components/atoms/Input/InputField";
 
 // import { WhiteButton, BlueButton } from "./components/atoms/Button/Button";
 // import ThreeButtons from "./components/molecules/ThreeButtons/ThreeButtons";
@@ -91,7 +92,8 @@ export default function Home() {
         <br />
         <ThreeButtons firstText="۸ الی ۱۵" secondText="bye" thirdText="!" />
       </div> */}
-      <HomePage />
+      {/* <HomePage /> */}
+      <InputMain width="500px" label="ghyfkg"/>
     </>
   );
 }

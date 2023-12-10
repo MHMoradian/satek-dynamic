@@ -1,15 +1,15 @@
-import { Sail } from "next/font/google";
+// import { Sail } from "next/font/google";
 import React from "react";
 import Sale from "../templates/Template";
-import Card from "../atoms/Card/Card";
+import MainCard from "../atoms/MainCard/MainCard";
 import styled from "styled-components";
 
 const HomePage = () => {
   return (
     <Sale>
-      <Card>
+      <MainCard backgroundColor="red" width="500px">
         <Styles>hello wrold</Styles>
-      </Card>
+      </MainCard>
     </Sale>
   );
 };

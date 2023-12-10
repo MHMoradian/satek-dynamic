@@ -10,7 +10,7 @@ import OraganizationsIcon from "../atoms/icons/OraganizationsIcon";
 import HelpIcon from "../atoms/icons/HelpIcon";
 import Sidebar from "../organisms/Sidebar/Sidebar";
 import Header from "../organisms/Header/Header";
-import Card from "../atoms/Card/Card";
+import MainCard from "../atoms/MainCard/MainCard";
 
 type TemplateProps = {
   children: ReactNode | ReactElement;
@@ -64,7 +64,7 @@ const Template: FC<TemplateProps> = ({ children }) => {
           },
         ]}
       />
-      <Card>{children}</Card>
+      <MainCard></MainCard>
     </>
   );
 };
