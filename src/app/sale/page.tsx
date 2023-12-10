@@ -1,5 +1,5 @@
 "use client";
-import SalePage from "../components/pages/SalePage/SalePage";
+import SalePage from "../../components/pages/SalePage/SalePage";
 
 const page = () => {
   return <SalePage />;
