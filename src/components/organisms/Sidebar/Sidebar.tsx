@@ -35,7 +35,7 @@ const StyledSidebar = styled.aside`
   .nav-list {
     flex-direction: column;
     margin: 0;
-    gap: 1rem;
+    gap: 0.4rem;
     height: 100%;
   }
 
@@ -52,11 +52,12 @@ const StyledSidebar = styled.aside`
       margin: 0 auto;
       padding: 1rem 0;
       flex-direction: column;
-      font-size: 20px;
+      font-size: 1rem;
+      gap: 0.3rem;
       svg {
         width: 100%;
+        height: 3rem;
         border: 3px solid transparent;
-        height: 50px;
       }
     }
     a:hover {

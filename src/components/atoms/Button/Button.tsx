@@ -15,6 +15,18 @@ export const Button = styled.button`
   text-decoration: none;
   font-size: 20px;
 
+  svg {
+    width: 32px;
+    height: 32px;
+    stroke: currentColor;
+    path {
+      stroke: currentColor;
+    }
+    circle {
+      stroke: currentColor;
+    }
+  }
+
   &:active {
     border: 1px solid #4579dc;
   }

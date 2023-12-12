@@ -4,29 +4,28 @@ interface InputProps {
   label: string;
 }
 
-enum inputStatus{
-  sucsses= "success",
-  failse= "failse"
+enum inputStatus {
+  sucsses = "success",
+  failse = "failse",
 }
 
-export const InputMain: React.FC<InputProps> = ({ width,
-  label}) => {
-    return (
-      <InputContainer >
-        <InputField status={inputStatus.sucsses} width={width} type="text" />
-        <InputLabel>{label}</InputLabel>
-      </InputContainer>
-    );
-  };
-  
-  interface inpProps {
-    status: inputStatus
-  }
+export const InputMain: React.FC<InputProps> = ({ width, label }) => {
+  return (
+    <InputContainer>
+      <InputField status={inputStatus.sucsses} width={width} type="text" />
+      <InputLabel>{label}</InputLabel>
+    </InputContainer>
+  );
+};
+
+interface inpProps {
+  status: inputStatus;
+}
 const InputContainer = styled.div`
   position: relative;
-  margin: 1.25rem;
+  /* margin: 1.25rem; */
   direction: rtl;
-`
+`;
 const InputLabel = styled.label`
   position: absolute;
   top: 0.625rem;
@@ -34,14 +33,17 @@ const InputLabel = styled.label`
   font-size: 1rem;
   color: #89959f;
   transition: all 0.3s ease;
-`
+`;
 
 const InputField = styled.input<inpProps>`
   display: block;
   width: ${(props) => props.width};
   padding: 0.625rem;
   font-size: 1rem;
-  border: ${props => props.status === inputStatus.sucsses ? "0.125rem solid #09a323" : "0.125rem solid #c40000"};
+  border: ${(props) =>
+    props.status === inputStatus.sucsses
+      ? "0.125rem solid #09a323"
+      : "0.125rem solid #c40000"};
   border-radius: 1.25rem;
   outline: none;
   background-color: transparent;
@@ -53,5 +55,5 @@ const InputField = styled.input<inpProps>`
     font-size: 0.75rem;
     color: #89959f;
   }
-`
-export default InputMain
+`;
+export default InputMain;

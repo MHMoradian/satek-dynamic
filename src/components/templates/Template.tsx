@@ -11,6 +11,7 @@ import HelpIcon from "../atoms/icons/HelpIcon";
 import Sidebar from "../organisms/Sidebar/Sidebar";
 import Header from "../organisms/Header/Header";
 import MainCard from "../atoms/MainCard/MainCard";
+import SettingsIcon from "../atoms/icons/SettingsIcon";
 
 type TemplateProps = {
   children: ReactNode | ReactElement;
@@ -58,13 +59,18 @@ const Template: FC<TemplateProps> = ({ children }) => {
             icon: <OraganizationsIcon />,
           },
           {
+            name: "تنظیمات",
+            route: "#",
+            icon: <SettingsIcon />,
+          },
+          {
             name: "راهنما",
             route: "#",
             icon: <HelpIcon />,
           },
         ]}
       />
-      <MainCard></MainCard>
+      {children}
     </>
   );
 };

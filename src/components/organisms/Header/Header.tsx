@@ -35,6 +35,12 @@ const StyledHeader = styled.header`
   /* gap: 1rem; */
   background-color: #fff;
   border: none;
+
+  .nav-item {
+    a {
+      font-size: 1.35rem;
+    }
+  }
 `;
 
 const HeaderLogo = styled.div`

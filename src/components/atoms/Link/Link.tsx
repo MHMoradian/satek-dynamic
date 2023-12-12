@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Link = styled.a`
-  font-size: 24px;
+  font-size: 1.35rem;
   color: #c4c4c4;
   text-decoration: none;
   padding: 1.2rem 0.5rem;

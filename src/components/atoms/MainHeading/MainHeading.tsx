@@ -1,22 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-
-  
-
-interface MainHeadingProps {
-  color?: string;
-  fontSize?: string;
-  textAlign?: string;
-  width?: string;
-  height?: string;
-}
-
-const MainHeading = styled.h1<MainHeadingProps>`
-  color: ${({ color }) => color || '#2E4470'};
-  font-size: ${({ fontSize }) => fontSize || '2em'};
-  text-align: ${({ textAlign }) => textAlign || 'center'};
-  width: ${({ width }) => width || '100%'};
-  height: ${({ height }) => height || 'auto'};
+export const MainHeading = styled.h1`
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: black;
+  padding: 2rem 0;
+  border-bottom: 1px solid #c4c4c4;
 `;
-
-export default MainHeading;
