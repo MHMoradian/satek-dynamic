@@ -100,15 +100,12 @@ const CardContentContainer = styled.div`
 
   .three-buttons-first {
     width: 100%;
-    color: #4579dc;
   }
   .three-buttons-second {
     width: 100%;
-    color: #4579dc;
   }
   .three-buttons-third {
     width: 100%;
-    color: #4579dc;
   }
 
   .four-inputs-container {
