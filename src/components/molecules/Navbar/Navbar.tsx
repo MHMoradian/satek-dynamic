@@ -6,11 +6,12 @@ type NavbarProps = {
 };
 
 const Navbar = (props: NavbarProps) => {
+  let number = 0;
   return (
     <StyledMenu className="nav-list">
       {props.menuItems.map((menuItem) => {
         return (
-          <MenuItem className="nav-item">
+          <MenuItem key={number++} className="nav-item">
             <Link href={menuItem.route || "#"}>
               {menuItem.icon}
               <span>{menuItem.name}</span>
