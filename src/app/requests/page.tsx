@@ -1,5 +1,5 @@
 "use client";
-import RequestsPage from "../components/pages/RequestsPage/RequestsPage";
+import RequestsPage from "../../components/pages/RequestsPage/RequestsPage";
 
 const page = () => {
   return <RequestsPage />;
