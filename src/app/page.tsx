@@ -94,6 +94,8 @@ export default function Home() {
       </div> */}
       {/* <HomePage /> */}
       <InputMain width="500px" label="ghyfkg" />
+      <TwoButtons firstText="عادی" secondText="فوری" />
+      <ThreeButtons firstText="۸ الی ۱۵" secondText="bye" thirdText="!" />
     </>
   );
 }

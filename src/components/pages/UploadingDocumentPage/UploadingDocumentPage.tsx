@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { MainHeading } from "../../atoms/MainHeading/MainHeading";
 import { Textarea } from "../../atoms/Textarea/Textarea";
 import { Button } from "../../atoms/Button";
+import LabelInput from "@/components/molecules/labelInput/LabelInput";
 
 const UploadingDocumentPage = () => {
   return (
@@ -14,8 +15,18 @@ const UploadingDocumentPage = () => {
         <CardContentContainer>
           <form>
             <MainHeading>بارگذاری مدارک</MainHeading>
-            <InputMain width="100%" label="نام مدرک" />
-            <InputMain width="100%" label="نوع مدرک" />
+            <LabelInput
+              width="100%"
+              placeholder="نام مدرک"
+              text="نام مدرک"
+              type="text"
+            />
+            <LabelInput
+              width="100%"
+              placeholder="نوع مدرک"
+              text="نوع مدرک"
+              type="text"
+            />
             <Textarea
               placeholder="تصویر مدرک را آپلود کنید"
               className="uploading-picture"

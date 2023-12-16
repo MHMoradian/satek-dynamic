@@ -1,15 +1,30 @@
 import styled from "styled-components";
-import { Button } from "../../atoms/Button/Button";
+import { Button, ToggleButton } from "../../atoms/Button/Button";
+import { useState } from "react";
 
 type TwoButtonsProps = {
   firstText: string;
   secondText: string;
 };
 const TwoButtons = ({ firstText, secondText }: TwoButtonsProps) => {
+  const types = [firstText, secondText];
+  const [active, setActive] = useState(types[0]);
   return (
     <TwoButtonsStyle>
-      <Button className="two-buttons-first">{firstText}</Button>
-      <Button className="two-buttons-second">{secondText}</Button>
+      <ToggleButton
+        onClick={() => setActive(types[0])}
+        $active={active === types[0]}
+        className="two-buttons-first"
+      >
+        {firstText}
+      </ToggleButton>
+      <ToggleButton
+        onClick={() => setActive(types[1])}
+        $active={active === types[1]}
+        className="two-buttons-second"
+      >
+        {secondText}
+      </ToggleButton>
     </TwoButtonsStyle>
   );
 };

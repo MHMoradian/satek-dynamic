@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Button } from "../../atoms/Button/Button";
+import { Button, ToggleButton } from "../../atoms/Button/Button";
+import { useState } from "react";
 
 type ThreeButtonsProps = {
   firstText: string;
@@ -14,11 +15,31 @@ const ThreeButtons = ({
   thirdText,
   className,
 }: ThreeButtonsProps) => {
+  const types = [firstText, secondText, thirdText];
+  const [active, setActive] = useState(types[0]);
   return (
     <ThreeButtonsStyle className={className}>
-      <Button className="three-buttons-first">{firstText}</Button>
-      <Button className="three-buttons-second">{secondText}</Button>
-      <Button className="three-buttons-third">{thirdText}</Button>
+      <ToggleButton
+        onClick={() => setActive(types[0])}
+        $active={active === types[0]}
+        className="three-buttons-first"
+      >
+        {firstText}
+      </ToggleButton>
+      <ToggleButton
+        onClick={() => setActive(types[1])}
+        $active={active === types[1]}
+        className="three-buttons-second"
+      >
+        {secondText}
+      </ToggleButton>
+      <ToggleButton
+        onClick={() => setActive(types[2])}
+        $active={active === types[2]}
+        className="three-buttons-third"
+      >
+        {thirdText}
+      </ToggleButton>
     </ThreeButtonsStyle>
   );
 };
