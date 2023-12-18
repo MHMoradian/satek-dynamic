@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export const Textarea = styled.textarea<{ $width: string; $height: string }>`
   width: ${(props) => props.$width};
@@ -10,6 +10,7 @@ export const Textarea = styled.textarea<{ $width: string; $height: string }>`
   padding: 1rem;
   resize: none;
   font-size: 1rem;
+  resize: none;
 
   &:focus {
     outline: none;

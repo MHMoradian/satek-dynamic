@@ -25,6 +25,7 @@ const TextAreaWrraper = styled.textarea`
   padding-right: 4px;
   border-radius: 8px;
   border: 1px solid #aaa;
+  resize: none;
   &:focus::placeholder {
     opacity: 0;
     color: transparent;

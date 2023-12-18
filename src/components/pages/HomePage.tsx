@@ -1,8 +1,8 @@
 // import { Sail } from "next/font/google";
-import React from "react";
-import Sale from "../templates/Template";
-import MainCard from "../atoms/MainCard/MainCard";
-import styled from "styled-components";
+import React from 'react';
+import Sale from '../templates/Template';
+import MainCard from '../atoms/MainCard/MainCard';
+import styled from 'styled-components';
 
 const HomePage = () => {
   return (

@@ -4,17 +4,32 @@ import LabelInput from '../labelInput/LabelInput';
 import styled from 'styled-components';
 import Textarea from '@/components/atoms/textarea/Textarea';
 import { Button } from '@/components/atoms/Button';
+import InputForForm from '@/components/atoms/inputForForm/InputForForm';
 
 const FormForIndentity = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({});
-  const onFormSubmit = (data) => {
+  } = useForm({
+    defaultValues: {
+      name: '',
+      registrationnumber: '',
+      fieldofactivity: '',
+      scopeofactivity: '',
+      state: '',
+      city: '',
+      postalcode: '',
+      landlinephone: '',
+      email: '',
+      hghgh: '',
+    },
+  });
+  const onFormSubmit = (data: any) => {
     console.log('the form is submited');
     console.log(data);
   };
+
   return (
     <form onSubmit={handleSubmit(onFormSubmit)}>
       <Container>
@@ -24,26 +39,15 @@ const FormForIndentity = () => {
             text="نام شرکت"
             placeholder="نام شرکت"
             width="400px"
-            {...register('name', {
-              minLength: {
-                value: 3,
-                message: 'حداقل سه کارکتر',
-              },
-              maxLength: {
-                value: 10,
-                message: 'حداکثر ده کاراکتر',
-              },
-            })}
+            {...register('name')}
           />
-          {errors.name}
+
           <LabelInput
             type="text"
             text="شماره ثبت"
             placeholder="شماره ثبت"
             width="400px"
-            {...register('registrationnumber', {
-              required: 'وارد کردن شماره ثبت اجباری می باشد.',
-            })}
+            {...register('registrationnumber')}
           />
         </MainContainer>
         <MainContainer>

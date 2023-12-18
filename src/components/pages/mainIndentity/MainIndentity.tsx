@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import TwoButtons from '@/components/molecules/TwoButtons/TwoButtons';
 import { useForm } from 'react-hook-form';
 import FormForIndentity from '@/components/molecules/formforindentity/FormForIndentity';
+import FormWithItsAtoms from '@/components/molecules/formWithItsAtoms/FormWithItsAtoms';
 
 const MainIndentity = () => {
   return (
