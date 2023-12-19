@@ -1,14 +1,7 @@
-import InputExample from '@/components/atoms/exampleInput/InputExample';
-import Label from '@/components/atoms/label/Label';
-
-import { useForm } from 'react-hook-form';
-import styled from 'styled-components';
-import {
-  FieldValues,
-  UseControllerProps,
-  useController,
-} from 'react-hook-form';
-import React, { InputHTMLAttributes } from 'react';
+import InputExample from "@/components/atoms/exampleInput/InputExample";
+import Label from "@/components/atoms/label/Label";
+import React from "react";
+import styled from "styled-components";
 interface IProps {
   text: string;
   placeholder?: string;
@@ -42,6 +35,7 @@ const LabelInput = ({
         id={id}
         width={width}
         type={type}
+        {...rest}
         {...rest}
       />
     </WrapperStyle>

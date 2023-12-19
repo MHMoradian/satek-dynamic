@@ -23,34 +23,32 @@ const RequestsPage = () => {
           </Button>
           <SearchBar />
         </TopButtonsContainer>
-        <Card $width="100%" $height="100%">
-          <CardContentContainer>
-            <Requests
-              requestsItem={[
-                {
-                  description:
-                    "ایمپلنت استخوانی ستون فقرات پیچ های پدیکولار مهره ای",
-                  number: 23,
-                  date: "۱۳۹۹/۰۲/۱۵",
-                  location: "تهران-بیمارستان فوق تخصصی چشم النبیا",
-                },
-                {
-                  description:
-                    "ایمپلنت استخوانی ستون فقرات پیچ های پدیکولار مهره ای",
-                  number: 23,
-                  date: "۱۳۹۹/۰۲/۱۵",
-                  location: "تهران-بیمارستان فوق تخصصی چشم النبیا",
-                },
-                {
-                  description:
-                    "ایمپلنت استخوانی ستون فقرات پیچ های پدیکولار مهره ای",
-                  number: 23,
-                  date: "۱۳۹۹/۰۲/۱۵",
-                  location: "تهران-بیمارستان فوق تخصصی چشم النبیا",
-                },
-              ]}
-            />
-          </CardContentContainer>
+        <Card width="100%" height="100%" padding="0 2rem">
+          <Requests
+            requestsItem={[
+              {
+                description:
+                  "ایمپلنت استخوانی ستون فقرات پیچ های پدیکولار مهره ای",
+                number: 23,
+                date: "۱۳۹۹/۰۲/۱۵",
+                location: "تهران-بیمارستان فوق تخصصی چشم النبیا",
+              },
+              {
+                description:
+                  "ایمپلنت استخوانی ستون فقرات پیچ های پدیکولار مهره ای",
+                number: 23,
+                date: "۱۳۹۹/۰۲/۱۵",
+                location: "تهران-بیمارستان فوق تخصصی چشم النبیا",
+              },
+              {
+                description:
+                  "ایمپلنت استخوانی ستون فقرات پیچ های پدیکولار مهره ای",
+                number: 23,
+                date: "۱۳۹۹/۰۲/۱۵",
+                location: "تهران-بیمارستان فوق تخصصی چشم النبیا",
+              },
+            ]}
+          />
         </Card>
       </ContentContainer>
     </Template>
@@ -65,20 +63,12 @@ const ContentContainer = styled.div`
   margin: 0 10rem 0 4rem;
 `;
 
-const CardContentContainer = styled.div`
-  width: 97%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-`;
-
 const TopButtonsContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 2.5rem;
   gap: 1.5rem;
   > button {
-    /* width */
     color: #4579dc;
     border: none;
     font-size: 1rem;

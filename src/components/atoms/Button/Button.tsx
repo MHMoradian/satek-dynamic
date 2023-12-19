@@ -148,9 +148,13 @@ export const Button = styled.button`
     `}
 `;
 
-export const ToggleButton = styled(Button)<{ $active: boolean }>`
-  ${({ $active }) =>
-    $active &&
+interface ToggleButtonProps {
+  active: boolean;
+}
+
+export const ToggleButton = styled(Button)<ToggleButtonProps>`
+  ${({ active }) =>
+    active &&
     `      color: #fff;
     background-color: #4579dc;
     border: 1px solid #4579dc;`}

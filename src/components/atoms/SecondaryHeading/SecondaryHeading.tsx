@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-export const SecondaryHeading = styled.h2`
+interface SecondaryHeadingProps {
+  margin: string;
+  fontSize: string;
+}
+
+export const SecondaryHeading = styled.h2<SecondaryHeadingProps>`
   color: #c4c4c4;
-  font-size: 20px;
+  font-size: ${(props) => props.fontSize};
+  margin: ${(props) => props.margin};
 `;

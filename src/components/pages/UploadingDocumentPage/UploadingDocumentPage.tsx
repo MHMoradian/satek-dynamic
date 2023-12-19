@@ -11,42 +11,40 @@ import LabelInput from "@/components/molecules/labelInput/LabelInput";
 const UploadingDocumentPage = () => {
   return (
     <Template>
-      <Card $width="30rem" $height="100%">
-        <CardContentContainer>
-          <form>
-            <MainHeading>بارگذاری مدارک</MainHeading>
-            <LabelInput
-              width="100%"
-              placeholder="نام مدرک"
-              text="نام مدرک"
-              type="text"
-            />
-            <LabelInput
-              width="100%"
-              placeholder="نوع مدرک"
-              text="نوع مدرک"
-              type="text"
-            />
-            <Textarea
-              placeholder="تصویر مدرک را آپلود کنید"
-              className="uploading-picture"
-              $width="100%"
-              $height="10rem"
-            />
-            <Textarea
-              className="description"
-              $width="100%"
-              $height="6rem"
-              placeholder="توضیحات"
-            />
-            <div className="buttons-container">
-              <Button type="submit" color="blue">
-                تایید
-              </Button>
-              <Button>انصراف</Button>
-            </div>
-          </form>
-        </CardContentContainer>
+      <Card width="30rem" height="100%" padding="0 2rem">
+        <MainHeading>بارگذاری مدارک</MainHeading>
+        <FormContainer>
+          <LabelInput
+            width="100%"
+            placeholder="نام مدرک"
+            text="نام مدرک"
+            type="text"
+          />
+          <LabelInput
+            width="100%"
+            placeholder="نوع مدرک"
+            text="نوع مدرک"
+            type="text"
+          />
+          <Textarea
+            placeholder="تصویر مدرک را آپلود کنید"
+            className="uploading-picture"
+            width="100%"
+            height="10rem"
+          />
+          <Textarea
+            className="description"
+            width="100%"
+            height="6rem"
+            placeholder="توضیحات"
+          />
+          <div className="buttons-container">
+            <Button type="submit" color="blue">
+              تایید
+            </Button>
+            <Button>انصراف</Button>
+          </div>
+        </FormContainer>
       </Card>
     </Template>
   );
@@ -54,12 +52,7 @@ const UploadingDocumentPage = () => {
 
 export default UploadingDocumentPage;
 
-const CardContentContainer = styled.div`
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-
+const FormContainer = styled.form`
   input {
     margin-top: 3rem;
   }

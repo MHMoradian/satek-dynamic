@@ -1,6 +1,5 @@
-import React, { InputHTMLAttributes } from "react";
+import React from "react";
 import styled from "styled-components";
-import { errors } from "undici-types";
 
 interface IProps {
   placeholder?: string;

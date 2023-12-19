@@ -12,15 +12,21 @@ const TwoButtons = ({ firstText, secondText }: TwoButtonsProps) => {
   return (
     <TwoButtonsStyle>
       <ToggleButton
-        onClick={() => setActive(types[0])}
-        $active={active === types[0]}
+        onClick={(e) => {
+          e.preventDefault();
+          setActive(types[0]);
+        }}
+        active={active === types[0]}
         className="two-buttons-first"
       >
         {firstText}
       </ToggleButton>
       <ToggleButton
-        onClick={() => setActive(types[1])}
-        $active={active === types[1]}
+        onClick={(e) => {
+          e.preventDefault();
+          setActive(types[1]);
+        }}
+        active={active === types[1]}
         className="two-buttons-second"
       >
         {secondText}
