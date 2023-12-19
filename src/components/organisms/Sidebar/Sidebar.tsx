@@ -8,7 +8,7 @@ type SidebarProps = {
 const Sidebar = (props: SidebarProps) => {
   return (
     <StyledSidebar>
-      <div>
+      <div className="logo">
         <div className="sidebar-logo-link">
           <img src="https://www.satek.ir/static/media/Sateklogo.32dfd236.svg" />
         </div>
@@ -21,8 +21,8 @@ const Sidebar = (props: SidebarProps) => {
 export default Sidebar;
 
 const StyledSidebar = styled.aside`
-  height: 100vh;
-  width: 6vw;
+  min-height: 100vh;
+  width: fit-content;
   position: absolute;
   right: 0;
   top: 0;
@@ -32,6 +32,9 @@ const StyledSidebar = styled.aside`
   background-color: #4579dc;
   border-radius: 3rem 0 0 0;
 
+  .logo {
+    background-color: red;
+  }
   .nav-list {
     flex-direction: column;
     margin: 0;

@@ -1,5 +1,6 @@
-import React, { InputHTMLAttributes } from 'react';
-import styled from 'styled-components';
+import React, { InputHTMLAttributes } from "react";
+import styled from "styled-components";
+import { errors } from "undici-types";
 
 interface IProps {
   placeholder?: string;
@@ -7,17 +8,46 @@ interface IProps {
   className?: string;
   width?: string;
   type: string;
+
+  name: string;
+  required?: string;
+  errors: any;
+  register: any;
+  // validationSchema: any;
+  maxLength?: number;
+  label?: string;
 }
 
-const InputExample = ({ placeholder, id, className, width, type }: IProps) => {
+const InputExample = ({
+  placeholder,
+  id,
+  className,
+  width,
+  type,
+  name,
+  required,
+  errors,
+  register,
+  maxLength,
+}: // validationSchema,
+IProps) => {
+  // console.log(errors);
   return (
-    <InputWrapper
-      placeholder={placeholder}
-      id={id}
-      className={className}
-      width={width}
-      type={type}
-    />
+    <>
+      <InputWrapper
+        placeholder={placeholder}
+        id={id}
+        className={className}
+        width={width}
+        type={type}
+        name={name}
+        // label={label}
+        {...register(name, { required: required, maxLength: maxLength })}
+        // aria-invalid={errors[name] ? "true" : "false"}
+      />
+
+      {errors[name] && <p>{errors[name].type}</p>}
+    </>
   );
 };
 
@@ -36,5 +66,5 @@ const InputWrapper = styled.input`
     color: transparent;
   }
   border-radius: 40px;
-  width: ${({ width }) => width || '200px'};
+  width: ${({ width }) => width || "200px"};
 `;
