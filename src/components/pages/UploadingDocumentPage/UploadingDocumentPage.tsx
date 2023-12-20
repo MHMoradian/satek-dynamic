@@ -1,26 +1,39 @@
-import React from "react";
-import Template from "../../templates/Template";
-import { Card } from "../../atoms/Card/Card";
-import InputMain from "../../atoms/Input/InputField";
-import styled from "styled-components";
-import { MainHeading } from "../../atoms/MainHeading/MainHeading";
-import { Textarea } from "../../atoms/Textarea/Textarea";
-import { Button } from "../../atoms/Button";
-import LabelInput from "@/components/molecules/labelInput/LabelInput";
+import React from 'react';
+import Template from '../../templates/Template';
+import { Card } from '../../atoms/Card/Card';
+import InputMain from '../../atoms/Input/InputField';
+import styled from 'styled-components';
+import { MainHeading } from '../../atoms/MainHeading/MainHeading';
+import { Textarea } from '../../atoms/Textarea/Textarea';
+import { Button } from '../../atoms/Button';
+import LabelInput from '@/components/molecules/labelInput/LabelInput';
+import { useForm } from 'react-hook-form';
 
 const UploadingDocumentPage = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const submitForm = (data) => {
+    console.log(data);
+  };
   return (
     <Template>
       <Card width="30rem" height="100%" padding="0 2rem">
         <MainHeading>بارگذاری مدارک</MainHeading>
         <FormContainer>
           <LabelInput
+            register={register}
+            name="need"
             width="100%"
             placeholder="نام مدرک"
             text="نام مدرک"
             type="text"
           />
           <LabelInput
+            register={register}
+            name="need"
             width="100%"
             placeholder="نوع مدرک"
             text="نوع مدرک"

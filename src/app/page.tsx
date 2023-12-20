@@ -1,27 +1,27 @@
-"use client";
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import Image from 'next/image';
+import styles from './page.module.css';
 // import Button from "./components/atoms/Button/Button";
-import ThreeButtons from "../components/molecules/ThreeButtons/ThreeButtons";
-import TwoButtons from "../components/molecules/TwoButtons/TwoButtons";
-import Navbar from "../components/molecules/Navbar/Navbar";
-import Header from "../components/organisms/Header/Header";
-import ProfileImage from "../components/atoms/ProfileImage/ProfileImage";
-import NewRequestIcon from "../components/atoms/icons/NewRequestIcon";
-import RequestsHistoryIcon from "../components/atoms/icons/RequestsHistoryIcon";
-import NotCompletedRequests from "../components/atoms/icons/NotCompletedRequestsIcon";
-import Sidebar from "../components/organisms/Sidebar/Sidebar";
-import Help from "../components/atoms/icons/HelpIcon";
-import HelpIcon from "../components/atoms/icons/HelpIcon";
-import NotCompletedRequestsIcon from "../components/atoms/icons/NotCompletedRequestsIcon";
-import RequestListIcon from "../components/atoms/icons/RequestListIcon";
-import OraganizationsIcon from "../components/atoms/icons/OraganizationsIcon";
-import DashboardIcon from "../components/atoms/icons/DashboardIcon";
-import SettingsIcon from "../components/atoms/icons/SettingsIcon";
-import Sale from "../components/templates/Template";
-import { Button } from "../components/atoms/Button/Button";
-import HomePage from "../components/pages/HomePage";
-import InputMain from "../components/atoms/Input/InputField";
+import ThreeButtons from '../components/molecules/ThreeButtons/ThreeButtons';
+import TwoButtons from '../components/molecules/TwoButtons/TwoButtons';
+import Navbar from '../components/molecules/Navbar/Navbar';
+import Header from '../components/organisms/Header/Header';
+import ProfileImage from '../components/atoms/ProfileImage/ProfileImage';
+import NewRequestIcon from '../components/atoms/icons/NewRequestIcon';
+import RequestsHistoryIcon from '../components/atoms/icons/RequestsHistoryIcon';
+import NotCompletedRequests from '../components/atoms/icons/NotCompletedRequestsIcon';
+import Sidebar from '../components/organisms/Sidebar/Sidebar';
+import Help from '../components/atoms/icons/HelpIcon';
+import HelpIcon from '../components/atoms/icons/HelpIcon';
+import NotCompletedRequestsIcon from '../components/atoms/icons/NotCompletedRequestsIcon';
+import RequestListIcon from '../components/atoms/icons/RequestListIcon';
+import OraganizationsIcon from '../components/atoms/icons/OraganizationsIcon';
+import DashboardIcon from '../components/atoms/icons/DashboardIcon';
+import SettingsIcon from '../components/atoms/icons/SettingsIcon';
+import Sale from '../components/templates/Template';
+import { Button } from '../components/atoms/Button/Button';
+import HomePage from '../components/pages/HomePage';
+import ProductSpecifications from '../components/organisms/productspecifications/ProductSpecifications';
 
 // import { WhiteButton, BlueButton } from "./components/atoms/Button/Button";
 // import ThreeButtons from "./components/molecules/ThreeButtons/ThreeButtons";
@@ -93,7 +93,7 @@ export default function Home() {
         <ThreeButtons firstText="۸ الی ۱۵" secondText="bye" thirdText="!" />
       </div> */}
       {/* <HomePage /> */}
-      <InputMain width="500px" label="ghyfkg" />
+
       <TwoButtons firstText="عادی" secondText="فوری" />
       <ThreeButtons firstText="۸ الی ۱۵" secondText="bye" thirdText="!" />
       <ProductSpecifications

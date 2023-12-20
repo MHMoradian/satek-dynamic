@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import LabelInput from '../labelInput/LabelInput';
 import styled from 'styled-components';
-import Textarea from '@/components/atoms/textarea/Textarea';
+import { Textarea } from '@/components/atoms/Textarea/Textarea';
 import { Button } from '@/components/atoms/Button';
 import InputForForm from '@/components/atoms/inputForForm/InputForForm';
 

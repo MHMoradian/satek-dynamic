@@ -1,14 +1,22 @@
-import styled from "styled-components";
-import { MainHeading } from "../../atoms/MainHeading/MainHeading";
-import Template from "../../templates/Template";
-import { SecondaryHeading } from "../../atoms/SecondaryHeading/SecondaryHeading";
-import ThreeButtons from "../../molecules/ThreeButtons/ThreeButtons";
-import { Card } from "../../atoms/Card/Card";
-import { Textarea } from "../../atoms/Textarea/Textarea";
-import { Button } from "../../atoms/Button";
-import LabelInput from "@/components/molecules/labelInput/LabelInput";
-
+import styled from 'styled-components';
+import { MainHeading } from '../../atoms/MainHeading/MainHeading';
+import Template from '../../templates/Template';
+import { SecondaryHeading } from '../../atoms/SecondaryHeading/SecondaryHeading';
+import ThreeButtons from '../../molecules/ThreeButtons/ThreeButtons';
+import { Card } from '../../atoms/Card/Card';
+import { Textarea } from '../../atoms/Textarea/Textarea';
+import { Button } from '../../atoms/Button';
+import LabelInput from '@/components/molecules/labelInput/LabelInput';
+import { useForm } from 'react-hook-form';
 const SalePage = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const submitForm = (data) => {
+    console.log(data);
+  };
   return (
     <Template>
       <Card width="50rem" height="100%" padding="0 4rem">
@@ -16,12 +24,16 @@ const SalePage = () => {
         <form>
           <InputsContainer>
             <LabelInput
+              register={register}
+              name="need"
               width="100%"
               placeholder="داخل شهری"
               text="داخل شهری"
               type="text"
             />
             <LabelInput
+              register={register}
+              name="need"
               width="100%"
               placeholder="داخل استانی"
               text="داخل استانی"
@@ -30,12 +42,16 @@ const SalePage = () => {
             {/* <Textarea width="" height="9rem" flex="1" />
             <Textarea width="" height="9rem" flex="2" /> */}
             <LabelInput
+              register={register}
+              name="need"
               width="100%"
               placeholder="استان های منتخب"
               text="استان های منتخب"
               type="text"
             />
             <LabelInput
+              register={register}
+              name="need"
               width="100%"
               placeholder="کشوری"
               text="کشوری"

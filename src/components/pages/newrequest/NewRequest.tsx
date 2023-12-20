@@ -2,13 +2,20 @@ import Template from '@/components/templates/Template';
 import { Card } from '@/components/organisms/Card/Card';
 import React from 'react';
 import styled from 'styled-components';
-import InputExample from '@/components/atoms/exampleInput/InputExample';
 import LabelInput from '@/components/molecules/labelInput/LabelInput';
 import TwoButtons from '@/components/molecules/TwoButtons/TwoButtons';
-import Textarea from '@/components/atoms/textarea/Textarea';
+import { Textarea } from '@/components/atoms/Textarea/Textarea';
 import { Button } from '@/components/atoms/Button';
-
+import { useForm } from 'react-hook-form';
 const NewRequest = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const submitForm = (data) => {
+    console.log(data);
+  };
   return (
     <Template>
       <Card $width="800px" $height="600px">
@@ -16,6 +23,8 @@ const NewRequest = () => {
           <h1>ثبت درخواست جدید</h1>
           <ContainerForForm>
             <LabelInput
+              register={register}
+              name="time"
               placeholder="نام کالا"
               text="نام کالا"
               type="text"
@@ -24,25 +33,31 @@ const NewRequest = () => {
             <ContainerForMultipeInput>
               <TwoButtons firstText="عادی" secondText="فوری" />
               <LabelInput
+                register={register}
+                name="time"
                 placeholder="مهلت تحویل"
                 text="مهلت تحویل"
                 type="text"
                 width="200px"
               />
               <LabelInput
+                register={register}
+                name="there"
                 placeholder="موجودی"
                 text="موجودی"
                 type="text"
                 width="150px"
               />
               <LabelInput
+                register={register}
+                name="need"
                 placeholder="موردنیاز"
                 text="موردنیاز"
                 type="text"
                 width="150px"
               />
             </ContainerForMultipeInput>
-            <Textarea placeholder="توضیحات" cols={121} rows={7} />
+            <Textarea placeholder="توضیحات" width="900px" height="150px" />
             <ContainerForButton>
               <Button color="blue">ثبت درخواست</Button>
             </ContainerForButton>

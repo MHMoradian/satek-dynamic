@@ -1,7 +1,8 @@
-import InputExample from "@/components/atoms/exampleInput/InputExample";
-import Label from "@/components/atoms/label/Label";
-import React from "react";
-import styled from "styled-components";
+import InputExample from '@/components/atoms/exampleInput/InputExample';
+import Label from '@/components/atoms/label/Label';
+import React from 'react';
+import styled from 'styled-components';
+import { useForm } from 'react-hook-form';
 interface IProps {
   text: string;
   placeholder?: string;
@@ -9,13 +10,9 @@ interface IProps {
   htmlFor?: string;
   width?: string;
   type: string;
-}
-interface IProps {
-  placeholder?: string;
-  id?: string;
   className?: string;
-  width?: string;
-  type: string;
+  register: any;
+  name: string;
 }
 
 const LabelInput = ({
@@ -25,18 +22,27 @@ const LabelInput = ({
   htmlFor,
   width,
   type,
-  ...rest
+  name,
 }: IProps) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const submitForm = (data) => {
+    console.log(data);
+  };
   return (
     <WrapperStyle>
       <Label text={text} htmlFor={htmlFor} />
       <InputExample
+        register={register}
+        name={name}
         placeholder={placeholder}
         id={id}
         width={width}
         type={type}
-        {...rest}
-        {...rest}
+        errors={errors}
       />
     </WrapperStyle>
   );
