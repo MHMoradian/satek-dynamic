@@ -6,8 +6,8 @@ import { Link } from "../../atoms/Link/Link";
 
 type HeaderProps = {
   menuItems: { name: string; route: "#"; icon: React.ReactNode }[];
-  userName: string;
-  userImage: string;
+  userName?: string;
+  userImage?: string;
 };
 
 const Header = (props: HeaderProps) => {
@@ -16,8 +16,8 @@ const Header = (props: HeaderProps) => {
       <HeaderLogo>
         <Link href="#" className="header-logo-link">
           <span>⌄</span>
-          <span>{props.userName}</span>
-          <ProfileImage src={props.userImage} />
+          {props.userName && <span>{props.userName}</span>}
+          {props.userImage && <ProfileImage src={props.userImage} />}
         </Link>
       </HeaderLogo>
       <Navbar menuItems={props.menuItems} />

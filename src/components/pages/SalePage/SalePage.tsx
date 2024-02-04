@@ -1,20 +1,20 @@
-import styled from 'styled-components';
-import { MainHeading } from '../../atoms/MainHeading/MainHeading';
-import Template from '../../templates/Template';
-import { SecondaryHeading } from '../../atoms/SecondaryHeading/SecondaryHeading';
-import ThreeButtons from '../../molecules/ThreeButtons/ThreeButtons';
-import { Card } from '../../atoms/Card/Card';
-import { Textarea } from '../../atoms/Textarea/Textarea';
-import { Button } from '../../atoms/Button';
-import LabelInput from '@/components/molecules/labelInput/LabelInput';
-import { useForm } from 'react-hook-form';
+import styled from "styled-components";
+import { MainHeading } from "../../atoms/MainHeading/MainHeading";
+import Template from "../../templates/Template";
+import { SecondaryHeading } from "../../atoms/SecondaryHeading/SecondaryHeading";
+import ThreeButtons from "../../molecules/ThreeButtons/ThreeButtons";
+import { Card } from "../../atoms/Card/Card";
+import { Textarea } from "../../atoms/Textarea/Textarea";
+import { Button } from "../../atoms/Button";
+import LabelInput from "@/components/molecules/labelInput/LabelInput";
+import { useForm } from "react-hook-form";
 const SalePage = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const submitForm = (data) => {
+  const submitForm = (data: any) => {
     console.log(data);
   };
   return (

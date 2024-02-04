@@ -1,8 +1,8 @@
-import Navbar from '../../molecules/Navbar/Navbar';
-import styled from 'styled-components';
+import Navbar from "../../molecules/Navbar/Navbar";
+import styled from "styled-components";
 
 type SidebarProps = {
-  menuItems: { name: string; route: '#'; icon: React.ReactNode }[];
+  menuItems: { name: string; route: "#"; icon: React.ReactNode }[];
 };
 
 const Sidebar = (props: SidebarProps) => {
@@ -10,7 +10,10 @@ const Sidebar = (props: SidebarProps) => {
     <StyledSidebar>
       <div className="logo">
         <div className="sidebar-logo-link">
-          <img src="https://www.satek.ir/static/media/Sateklogo.32dfd236.svg" />
+          <img
+            src="https://www.satek.ir/static/media/Sateklogo.32dfd236.svg"
+            alt="Satek logo"
+          />
         </div>
       </div>
       <Navbar menuItems={props.menuItems} />
