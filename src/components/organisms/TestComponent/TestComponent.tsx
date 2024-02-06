@@ -9,9 +9,13 @@ import { Button } from "../../atoms/Button";
 import LabelInput from "@/components/molecules/labelInput/LabelInput";
 import { useForm } from "react-hook-form";
 
-import React from "react";
+import React, { FC } from "react";
 
-const TestComponent = () => {
+type TestComponentProps = {
+  flexGrow?: number;
+};
+
+const TestComponent: FC<TestComponentProps> = ({ flexGrow }) => {
   const {
     register,
     handleSubmit,
@@ -21,7 +25,7 @@ const TestComponent = () => {
     console.log(data);
   };
   return (
-    <Card padding="0 4rem">
+    <Card padding="0 4rem" style={{ flexGrow: flexGrow }}>
       <MainHeading>تعهدات مکانی و زمانی</MainHeading>
       <form>
         <InputsContainer>

@@ -2,19 +2,19 @@ import { FC, ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 
 type PageItemProps = {
-  components: { componentName: ReactElement; flexGrow: number }[];
-  // sidebarItems?: { name: string; route: "#"; icon: React.ReactNode }[];
-  // children: ReactNode | ReactElement;
+  // components: { componentName: ReactElement; flexGrow: number }[];
+  children: ReactNode | ReactElement;
 };
 
-const PageItem: FC<PageItemProps> = ({ components }) => {
+const PageItem: FC<PageItemProps> = ({ children }) => {
   return (
     <Flex>
-      {components.map((component, i) => (
+      {/* {components.map((component, i) => (
         <div style={{ flexGrow: component.flexGrow }} key={i}>
           {component.componentName}
         </div>
-      ))}
+      ))} */}
+      {children}
     </Flex>
   );
 };

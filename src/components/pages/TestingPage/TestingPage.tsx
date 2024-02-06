@@ -81,18 +81,10 @@ const TestingPage = () => {
     >
       <TestComponent />
       <TestComponent />
-      <PageItem
-        components={[
-          {
-            componentName: <TestComponent />,
-            flexGrow: 1,
-          },
-          {
-            componentName: <TestComponent />,
-            flexGrow: 2,
-          },
-        ]}
-      />
+      <PageItem>
+        <TestComponent flexGrow={1} />
+        <TestComponent flexGrow={2} />
+      </PageItem>
     </MainContainer>
   );
 };
